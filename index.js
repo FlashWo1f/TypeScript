@@ -47,9 +47,27 @@ console.log(x[0].substr(1)); // OK
 // 上面的Red 好像没有被下面的Red给引用到
 var Color;
 (function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 1] = "Green";
-    Color[Color["Blue"] = 2] = "Blue";
+    Color["Red"] = "1";
+    Color["Green"] = "hao";
+    Color["Blue"] = "wht";
 })(Color || (Color = {}));
 var c = Color.Green;
 var a = Color.Red;
+var myArray = ['1', '2'];
+function searchXiaoJieJie3() {
+    var xuqiu = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        xuqiu[_i] = arguments[_i];
+    }
+    var yy = '找到了';
+    for (var i = 0; i < xuqiu.length; i++) {
+        yy = yy + xuqiu[i];
+        if (i < xuqiu.length) {
+            yy = yy + '、';
+        }
+    }
+    yy = yy + '的小姐姐';
+    return yy;
+}
+var result = searchXiaoJieJie3('22岁', '大长腿', '瓜子脸', '水蛇腰');
+console.log(result);

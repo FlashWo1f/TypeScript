@@ -48,7 +48,7 @@ interface Person1 {
   lastName: string;
 }
 
-function greeter(person: Person1) {
+function greeter(person: Person1) :String {
   return "Hello, " + person.firstName + " " + person.lastName;
 }
 
@@ -86,6 +86,75 @@ interface Red {
   a: number
 }
 // 上面的Red 好像没有被下面的Red给引用到
-enum Color {Red, Green, Blue}
+enum Color {Red = "1", Green = "hao", Blue = "wht"}
 let c: Color = Color.Green
 let a: Color = Color.Red 
+const myArray: Array<string> = ['1','2']
+
+// 这个写法以前没看过。好像很优雅 ...xuqiu
+function searchXiaoJieJie3(...xuqiu:string[]):string{
+
+  let  yy:string = '找到了'
+  for (let i =0;i<xuqiu.length;i++){
+      yy = yy + xuqiu[i]
+      if(i<xuqiu.length){
+          yy=yy+'、'
+      }
+  }
+  yy=yy+'的小姐姐'
+  return yy
+
+}
+var result:string  =  searchXiaoJieJie3('22岁','大长腿','瓜子脸','水蛇腰')
+console.log(result)
+
+let arr3:number[ ]     //声明一个数值类型的数组
+let arr2:Array<string>  //声明一个字符串类型的数组
+
+
+class MyClass {
+  public sex: String
+  protected name: String
+  private age: number
+  public readonly readonly:string = "readonly"
+  // readponly
+  public constructor (sex: string, name: string, age: number) {
+    this.sex = sex
+    this.name = name
+    this.age = age
+  }
+  public say() {
+    console.log("hello 1")
+  }
+  protected sayYou() {
+    console.log("hello you")
+  }
+}
+
+const myClass = new MyClass("女", "阿伟", 22)
+console.log(myClass.name, myClass.say)
+myClass.say()
+myClass.sayYou()
+
+// 继承和重写  在子类里将父类的方法重新定义
+class Son extends MyClass {
+  public sayYou() {
+    super.sayYou()
+    console.log('继承到了')
+  }
+}
+
+// 规范函数类型接口
+interface SearchMan {
+  (source: string,subString: string): boolean
+}
+
+let mySearch: SearchMan
+
+mySearch = function(source: string,subString: string): boolean{
+  let flag = source.search(subString)
+  return (flag != -1)
+} 
+
+console.log(mySearch('高、富、帅、德','胖')) //false
+

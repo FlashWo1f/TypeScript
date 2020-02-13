@@ -1,0 +1,23 @@
+{
+  "name": "TypeScript",
+  "version": "1.0.0",
+  "description": "http://www.typescriptlang.org/docs/tutorial.html#toc-handbook  \r 官方最新版本同步中文翻译 https://zhongsp.gitbooks.io/typescript-handbook/content  \r 一些官方资源/网站  \r TS官网：http://www.typescriptlang.org/  \r TS类型定义库：https://github.com/borisyankov/DefinitelyTyped  \r http://definitelytyped.org/  \r TS在线试练场：http://www.typescriptlang.org/Playground  \r TS开源地址：https://github.com/Microsoft/TypeScript  \r TS语言规范：https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlashWo1f/TypeScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlashWo1f/TypeScript/issues"
+  },
+  "homepage": "https://github.com/FlashWo1f/TypeScript#readme",
+  "dependencies": {
+    "@types/node": "^13.7.0"
+  }
+}
